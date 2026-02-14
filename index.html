@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cinematic Modern Love</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../Css/style.css">
+</head>
+
+<body>
+
+  <!-- 🔥 NAVBAR -->
+  <!-- 🌸 NAVBAR -->
+  <header class="romantic-header">
+    <nav class="romantic-nav">
+
+      <!-- LEFT SIDE -->
+      <div class="nav-left">
+        <a href="slider.html" class="eyes-link">
+          <img src="../images/eyes.JPG" alt="Her Eyes">Click On<br>Your Eyes </a>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-actions">
+        <a href="music.html">
+          <button class="nav-btn"><a href="music.html">🎵 Songs For You</a></button>
+        </a>
+
+        <button class="nav-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+      </div>
+
+    </nav>
+  </header>
+
+
+
+  <!-- 🎵 MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="../songs/Leekan Ashke.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- 🌑 HERO -->
+  <section class="snap-section">
+    <div class="glass-card">
+      <h1>This space is yours.</h1>
+      <p>This space is yours 💫 — not to impress ✨, not to perform 🎭, not to carry expectations 🎒. Just to exist as
+        you are 🤍.<br><br>
+        Here, you don’t have to be strong all the time 💪, or perfect 🌸, or put together 🪞. You can be soft 🌷, quiet
+        🌙, overwhelmed 🌧️, ambitious 🚀, emotional 💞, fearless 🔥 — whatever version of yourself you are in this
+        moment 🌺.<br><br>
+
+        This is a place where your thoughts are safe 🕊️, your dreams are respected 🌟, and your silence is understood
+        🤍.
+        just a reminder that you are seen 👀, valued 💎, and chosen 💖 exactly as you
+        are. 🌹</p>
+      <button onclick="scrollToSection(1)" class="glass-btn">Continue</button>
+    </div>
+  </section>
+
+  <!-- 🌸 ABOUT -->
+  <section class="snap-section">
+    <div class="glass-card">
+      <h1>About You</h1>
+      <p>
+        Nonu, I don’t know how you do it, but you’ve quietly become my favorite notification 📱, my favorite smile 😊,
+        and honestly… my favorite human ❤️. There’s something about the way you just exist — calm, independent, doing
+        your own thing ✨ — that makes me admire you even more. You act all strong and unbothered 💪, but I know there’s
+        a soft, adorable side hidden in there 🫶, and that’s my favorite part.
+
+        You have this way of being effortlessly you — a little stubborn 😌, a little mysterious 🌙, and very cute (even
+        if you pretend you’re not 😏). I like how you don’t try too hard, how you don’t need attention to shine 🌟, and
+        how you stay true to yourself. It makes everything about you feel real.
+
+        I’m not saying I’m lucky… but okay, I’m definitely lucky 😌❤️ And I wouldn’t trade being your person for
+        anything 💖.<br><br><br>
+        scroll down ⬇
+      </p>
+    </div>
+  </section>
+
+  <!-- 💌 OPEN WHEN -->
+  <section class="snap-section">
+    <div class="glass-card">
+      <h1>Open When...</h1>
+
+      <button class="glass-btn small" onclick="openLetter('distant')">
+        You Feel Distant
+      </button>
+
+      <button class="glass-btn small" onclick="openLetter('overwhelmed')">
+        You're Overwhelmed
+      </button>
+
+      <button class="glass-btn small" onclick="openLetter('space')">
+        You Need Space
+      </button>
+
+      <div id="letterBox" class="letter-box"></div>
+    </div>
+  </section>
+  <footer class="romantic-footer">Made with ❤️ just for you</footer>
+
+  <script src="../Js/script.js"></script>
+</body>
+
+</html>

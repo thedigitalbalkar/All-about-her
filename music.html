@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Songs 💕</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Poppins:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="../Css/music.css">
+</head>
+
+<body>
+
+  <!-- 🌸 NAVBAR -->
+  <header class="romantic-header">
+    <nav class="romantic-nav">
+
+      <!-- LEFT SIDE -->
+      <div class="nav-left">
+        <a href="slider.html" class="eyes-link">
+          <img src="../images/eyes.JPG" alt="Her Eyes">
+          Click On Your Eyes</a>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="nav-actions">
+
+        <a href="music.html">
+          <button class="nav-btn"><a href="music.html">
+            🎵 Songs For You</a>
+          </button>
+        </a>
+
+        <button class="nav-btn" onclick="toggleDarkMode()">
+          🌙 Dark Mode
+        </button>
+
+      </div>
+
+    </nav>
+  </header>
+
+
+
+  <div class="music-wrapper">
+
+    <h1>Songs For You</h1>
+
+    <div class="music-player">
+
+      <audio id="bgMusic"></audio>
+
+      <div class="album-circle"></div>
+
+      <div class="song-title" id="songTitle">😁Only Amrinder Gill💕</div>
+
+      <div class="controls">
+        <button onclick="prevSong()">⏮</button>
+        <button onclick="toggleMusic()" id="playBtn">▶</button>
+        <button onclick="nextSong()">⏭</button>
+      </div>
+
+    </div>
+
+  </div>
+  <footer class="romantic-footer">Made with ❤️ just for you</footer>
+
+  <script src="../Js/music.js"></script>
+</body>
+
+</html>
