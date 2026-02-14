@@ -1,0 +1,372 @@
+:root {
+  --soft-blush: #ffe5ec;
+  --pastel-pink: #ffc2d1;
+  --cherry-blossom: #ffb3c6;
+  --cotton-candy: #ff8fab;
+  --petal-rouge: #fb6f92;
+  --dark-cherry: #d94f76;
+  --dark-cotton: #e05c8a;
+  --white: #ffffff;
+  --text-dark: #2b2b2b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= HEADER ================= */
+
+.romantic-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1000;
+}
+
+.romantic-nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid #ffc2d1;
+  box-shadow:
+    0 8px 32px rgba(251, 111, 146, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  transition: 0.3s ease;
+}
+
+/* LEFT SIDE */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: black;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+body.dark .nav-left a {
+  color: var(--white);
+}
+
+.eyes-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.eyes-link img {
+  width: 120px;
+  border-radius: 20px;
+  border: 1px solid #fb6f92;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.eyes-link:hover img {
+  transform: scale(1.08);
+}
+
+/* RIGHT SIDE */
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-actions a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-btn {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid #fb6f92;
+  background: rgba(255, 143, 171, 0.85);
+  color: #2b2b2b;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #e75480;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(173, 20, 87, 0.35);
+}
+
+/* ================= BODY ================= */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--cherry-blossom), var(--petal-rouge));
+  padding-top: 80px;
+  /* space for fixed header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.4s ease;
+}
+
+body.dark {
+  background: linear-gradient(135deg, var(--dark-cherry), var(--dark-cotton));
+}
+
+/* ================= MAIN WRAPPER ================= */
+
+.music-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 40px 20px;
+}
+
+/* ================= HEADING ================= */
+
+h1 {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 20px;
+}
+
+/* ================= PLAYER CARD ================= */
+
+.music-player {
+  width: 350px;
+  padding: 50px 35px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--pastel-pink);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* ================= ALBUM ================= */
+
+.album-circle {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--cotton-candy), var(--petal-rouge));
+  animation: pulse 1.5s infinite;
+}
+
+/* ================= SONG TITLE ================= */
+
+.song-title {
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+/* ================= CONTROLS ================= */
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.controls button {
+  font-size: 22px;
+  border: 1px solid var(--petal-rouge);
+  background: var(--cotton-candy);
+  color: black;
+  padding: 12px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.controls button:hover {
+  background: var(--petal-rouge);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* ================= PULSE ANIMATION ================= */
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(251, 111, 146, 0.6);
+  }
+
+  60% {
+    box-shadow: 0 0 0 25px rgba(251, 111, 146, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(251, 111, 146, 0);
+  }
+}
+
+/* ================= FLOATING HEARTS ================= */
+
+@keyframes floatLove {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.floating-love {
+  position: fixed;
+  bottom: -20px;
+  pointer-events: none;
+  animation: floatLove linear forwards;
+}
+
+/* ================= FOOTER ================= */
+
+.romantic-footer {
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: #a61e4d;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+
+  body {
+    padding-top: 120px;
+  }
+
+  .eyes-link img {
+    width: 70px;
+  }
+
+  .nav-btn {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  .music-player {
+    width: 95%;
+    padding: 35px 20px;
+  }
+
+  .album-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .controls {
+    gap: 15px;
+  }
+
+  .controls button {
+    font-size: 18px;
+    padding: 10px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 20px;
+  }
+
+  .romantic-header {
+    padding: 20px 25px;
+  }
+
+  .romantic-nav {
+
+    padding: 10px 15px;
+    border-radius: 40px;
+
+  }
+
+  .eyes-link img {
+
+    width: 70px;
+
+  }
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+
+  /* ================= MUSIC SECTION ================= */
+
+  .music-wrapper {
+    padding: 30px 15px;
+    margin: 0;
+  }
+
+  .music-player {
+    width: 90%;
+    max-width: 400px;
+    padding: 35px 25px;
+    border-radius: 20px;
+  }
+
+  .album-circle {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 20px;
+  }
+
+  .song-title {
+    font-size: 16px;
+    margin: 30px;
+  }
+
+  .controls {
+    gap: 20px;
+  }
+
+  .controls button {
+    font-size: 18px;
+    padding: 10px 16px;
+  }
+
+}

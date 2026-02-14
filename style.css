@@ -1,0 +1,331 @@
+:root {
+  --soft-blush: #ffe5ecff;
+  --pastel-pink: #ffc2d1ff;
+  --cherry-blossom: #ffb3c6ff;
+  --cotton-candy: #ff8fabff;
+  --petal-rouge: #fb6f92ff;
+  --dark-cherry: #d94f76;
+  --dark-cotton: #e05c8a;
+  --white: #ffffff;
+  --text-dark: #2b2b2b;
+}
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, var(--cherry-blossom), var(--petal-rouge));
+  color: var(--text-dark);
+  padding-top: 100px;
+  overflow-y: scroll;
+  transition: background 0.4s ease;
+}
+
+/* ================= DARK MODE ================= */
+
+body.dark {
+  background: linear-gradient(135deg, var(--dark-cherry), var(--dark-cotton));
+  color: var(--white);
+}
+
+/* ================= HEADINGS ================= */
+
+h1,
+h2,
+h3 {
+  font-family: serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 25px;
+}
+
+/* ================= HEADER ================= */
+
+.romantic-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  z-index: 1000;
+}
+
+.romantic-nav {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 30px;
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.25);
+  /* transparent white */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  /* Safari support */
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 8px 32px rgba(251, 111, 146, 0.25),
+    /* soft pink glow */
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  /* light top shine */
+
+  transition: 0.3s ease;
+}
+
+/* ================= LEFT (EYES) ================= */
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.nav-left a {
+  text-decoration: none;
+  color: black;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.eyes-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.eyes-link img {
+  width: 120px;
+  border-radius: 20px;
+  border: 1px solid var(--petal-rouge);
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+
+.eyes-link:hover img {
+  transform: scale(1.1);
+}
+
+/* ================= RIGHT BUTTONS ================= */
+
+.nav-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-actions a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-btn {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: 1px solid #e75480;
+  background: rgba(255, 143, 171, 0.85);
+  color: var(--text-dark);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: #e75480;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(173, 20, 87, 0.35);
+  color: var(--white);
+}
+
+/* ================= SECTIONS ================= */
+
+.snap-section {
+  scroll-snap-align: start;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 40px;
+  /* space for fixed header */
+}
+
+
+/* ================= GLASS CARD ================= */
+
+.glass-card {
+  width: 100%;
+  padding: 60px 40px;
+  margin-top: 100px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--pastel-pink);
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.glass-card p {
+  margin-top: 50px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* ================= BUTTONS ================= */
+
+.glass-btn {
+  margin-top: 50px;
+  padding: 14px 36px;
+  border-radius: 10px;
+  border: 1px solid #e75480;
+  background: rgba(251, 111, 146, 0.9);
+  color: var(--text-dark);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+
+.glass-btn:hover {
+  background: #e75480;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(166, 30, 77, 0.4);
+  color: var(--white);
+}
+
+.glass-btn.small {
+  padding: 14px 36px;
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+/* ================= LETTER BOX ================= */
+
+.letter-box {
+  margin-top: 50px;
+  font-size: 15px;
+}
+
+/* ================= FLOATING LOVE EMOJIS ================= */
+
+@keyframes floatLove {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.floating-love {
+  position: fixed;
+  bottom: -20px;
+  pointer-events: none;
+  animation: floatLove linear forwards;
+  z-index: 1;
+}
+
+
+.romantic-footer {
+
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: #a61e4d;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+
+  .romantic-header {
+    padding: 20px 25px;
+  }
+
+  .romantic-nav {
+    padding: 10px 15px;
+    border-radius: 40px;
+  }
+
+  .eyes-link img {
+    width: 70px;
+  }
+
+.nav-left a{
+  font-size: 6px;
+}
+
+  .nav-actions {
+    gap: 10px;
+  }
+
+  .nav-btn {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 8px;
+  }
+
+  .snap-section {
+    padding: 40px 15px;
+  }
+
+  .glass-card {
+    padding: 30px 20px;
+    border-radius: 20px;
+  }
+
+  .glass-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .glass-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .glass-btn.small {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .letter-box {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
