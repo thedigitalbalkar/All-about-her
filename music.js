@@ -3,9 +3,9 @@
 ========================================= */
 
 const songs = [
-  { src: "../songs/Leekan Ashke.mp3", title: "Leekan" },
-  { src: "../songs/Band Darvaze.mp3", title: "Band Darvaze" },
-  { src: "../songs/Sahan Ton Nere.mp3", title: "Sahan Ton Nere" }
+  { src: "Leekan Ashke.mp3", title: "Leekan" },
+  { src: "Band Darvaze.mp3", title: "Band Darvaze" },
+  { src: "Sahan Ton Nere.mp3", title: "Sahan Ton Nere" }
 ];
 
 let currentSongIndex = 0;
